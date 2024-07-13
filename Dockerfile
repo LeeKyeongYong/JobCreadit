@@ -1,5 +1,5 @@
 # 첫 번째 스테이지: 빌드 스테이지
-FROM gradle:jdk19-graal-jammy as builder
+FROM gradle:jdk21-graal-jammy as builder
 
 # 작업 디렉토리 설정
 WORKDIR /app
@@ -23,7 +23,7 @@ COPY src src
 RUN ./gradlew build --no-daemon
 
 # 두 번째 스테이지: 실행 스테이지
-FROM ghcr.io/graalvm/jdk-community:19
+FROM ghcr.io/graalvm/jdk-community:21
 
 # 작업 디렉토리 설정
 WORKDIR /app
