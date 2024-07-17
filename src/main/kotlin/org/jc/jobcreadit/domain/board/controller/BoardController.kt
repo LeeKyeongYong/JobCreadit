@@ -12,4 +12,10 @@ class BoardController { //게시판 컨트롤
     fun findAllBoards(): String {
         return "AAA"
     }
+
+    @GetMapping("/boards2")
+    fun findAllBoards(): String {
+        return "AAA"
+    }
+
 }
